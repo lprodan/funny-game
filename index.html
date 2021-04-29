@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funny game</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div class="layout">
+        <div class="pop-up"></div>
+        <div class="reset">
+            <button class="btn">RESET</button>
+        </div>
+        <div class="players">
+            <div class="player">
+                <div class="box-header">Player</div>
+                <div class="p-score"></div>
+                <div class="choice" type="rock" mirrored></div>
+            </div>
+
+            <div class="computer">
+                <div class="box-header">Computer</div>
+                <div class="c-score"></div>
+                <div class="choice" type="rock"></div>
+            </div>
+        </div>
+
+        <div class="variant">
+            <div class="header">Make a choice:</div>
+            <ul class="btns">
+                <li type="rock">rock</li>
+                <li type="scissors">scissors</li>
+                <li type="paper">paper</li>
+            </ul>
+        </div>
+                
+    </div>
+
+    <script src="js/lib.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

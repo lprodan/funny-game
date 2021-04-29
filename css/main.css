@@ -1,0 +1,163 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.players {
+    position: relative;
+    display: flex;
+}
+
+.pop-up {
+    font-size: 60px;
+    font-weight: bold;
+    position: absolute;
+    top: 200px;
+    left: 770px;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    color: red;
+}
+
+.layout {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#fff, #ccccff);
+}
+
+.choice {
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 35%;
+    background-image: url(../texture.png);
+    background-size: 640px 640px;
+}
+
+.choice[type=rock] {
+    background-position: -340px -89px;
+}
+
+.choice[type=paper] {
+    background-position: -100px -340px;
+}
+
+.choice[type=scissors] {
+    background-position: 0 0;
+}
+
+.choice[mirrored] {
+    transform: scale(-1, 1);
+}
+
+.player, .computer {
+    flex: 50%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.box-header {
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.p-score, .c-score {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.header {
+    font-size: 50px;;
+    margin-left: 800px;
+}
+
+ul.btns {
+    font-size: 60px;
+    display: flex;
+    margin: 20px 20px 20px 500px;
+    list-style: none;
+}
+
+.btns li {
+    width: 200px;
+    height: 70px;
+    margin: 0 30px;
+    padding: 0 10px 5px 10px;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    border-style: dotted;
+    border-color: gray;
+    border-radius: 10px;
+    box-shadow: 10px 10px 8px 2px rgba(0, 0, 255, .2);
+}
+
+.btns[disabled] li {
+    cursor: not-allowed;
+    opacity: .5;
+}
+
+.reset {
+    position: absolute;
+    z-index: 99999;
+    top: 10px;
+    left: 880px;
+    width: 150px;
+    height: 50px;
+}
+
+.btn {
+    font-size: 26px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-style: dotted;
+    background: transparent;
+    box-shadow: 0 12px 37px 6px rgba(0, 0, 255, .2);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:hover, .btns li:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.btns:not([disabled]) li:active {
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 40px;
+    box-shadow: none;
+}
+
+.btn:active {
+    margin-top: 6px;
+    box-shadow: none;
+}
+
+.variant {
+    position: absolute;
+    top: 500px;
+    left: 20px;
+}
+
+.shaking {
+    animation: shake 200ms infinite alternate;
+}
+
+@keyframes shake {
+    from {
+        margin-top: 30px;
+    }
+    to {
+        margin-top: 70px;
+    }
+}
